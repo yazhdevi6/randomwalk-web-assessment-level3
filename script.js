@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let scoreX = 0;
     let scoreO = 0;
 
-    // Initialize the game board
+   
     function initializeBoard() {
         for (let i = 0; i < 9; i++) {
             const cell = document.createElement("div");
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // Handle cell click event
+    
     function handleCellClick(event) {
         const index = event.target.dataset.index;
 
@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // Check for a winning pattern
+    
     function checkWin() {
         const winPatterns = [
             [0, 1, 2],
@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // Update the score and reset the board
+    
     function updateScore() {
         if (winner === "X") {
             scoreX++;
@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
         resetBoard();
     }
 
-    // Reset the game board
+    
     function resetBoard() {
         gameBoard = ["", "", "", "", "", "", "", "", ""];
         winner = null;
@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
         updatePlayerDisplay();
     }
 
-    // Reset the entire game
+    
     resetBtn.addEventListener("click", function () {
         scoreX = 0;
         scoreO = 0;
@@ -100,18 +100,18 @@ document.addEventListener("DOMContentLoaded", function () {
         resetBoard();
     });
 
-    // Update player display names
+   
     function updatePlayerDisplay() {
         playerXDisplayName.textContent = getPlayerDisplayName("X");
         playerODisplayName.textContent = getPlayerDisplayName("O");
     }
 
-    // Get player display name based on current player
+    
     function getPlayerDisplayName(playerSymbol) {
         return playerSymbol === "X" ? playerXNameInput.value || "Player X" : playerONameInput.value || "Player O";
     }
 
-    // Initialize the game board and player display
+    
     initializeBoard();
     updatePlayerDisplay();
 });
