@@ -1,0 +1,44 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e4c9e5;
+}
+
+.game-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.player-names {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 5px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    border: 2px solid #0c2f33;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.scorecard {
+    margin-top: 20px;
+}
+
+button {
+    margin-top: 10px;
+    font-size: 1em;
+    padding: 5px 10px;
+    cursor: pointer;
+}
